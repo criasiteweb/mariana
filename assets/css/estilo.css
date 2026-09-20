@@ -306,26 +306,26 @@ a{ color: inherit; }
 .mural__seta{
   position: absolute;
   top: 50%;
-  z-index: 3;
+  z-index: 4;
   transform: translateY(-50%);
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   display: grid;
   place-items: center;
   padding: 0;
-  border: 1px solid rgba(185,130,47,.4);
+  border: 2px solid var(--creme);
   border-radius: 50%;
-  background: var(--creme);
-  color: var(--cafe);
-  box-shadow: 0 10px 22px -10px rgba(46,30,16,.55);
+  background: var(--cafe);
+  color: var(--creme);
+  box-shadow: 0 8px 20px -6px rgba(46,30,16,.75);
   cursor: pointer;
   transition: opacity .25s ease, transform .18s ease;
 }
-.mural__seta svg{ width: 21px; height: 21px; }
-.mural__seta:active{ transform: translateY(-50%) scale(.92); }
-.mural__seta--esq{ left: -4px; }
-.mural__seta--dir{ right: -4px; }
-.mural__seta--off{ opacity: .25; pointer-events: none; }
+.mural__seta svg{ width: 24px; height: 24px; }
+.mural__seta:active{ transform: translateY(-50%) scale(.9); }
+.mural__seta--esq{ left: 8px; }
+.mural__seta--dir{ right: 8px; }
+.mural__seta--off{ opacity: .35; pointer-events: none; }
 
 .mural__janela{
   overflow-x: auto;
