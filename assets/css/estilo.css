@@ -179,10 +179,10 @@ a{ color: inherit; }
 .topo__selo{
   position: absolute;
   z-index: 2;
-  right: 1px;
-  bottom: 5px;
-  width: 42px;
-  height: 42px;
+  right: 5%;
+  bottom: 5%;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
   background: var(--creme);
