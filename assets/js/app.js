@@ -60,6 +60,31 @@
     '</figure>'
   ).join("");
 
+
+  /* ---------- trilho: anda sozinho e aceita arrastar com o dedo ---------- */
+  const janela = $(".mural__janela");
+  if (janela) {
+    const devagar = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let pausa = 0;
+    const segurar = () => { pausa = Date.now() + 2500; };
+    ["pointerdown", "touchstart", "wheel", "mouseenter"].forEach((ev) =>
+      janela.addEventListener(ev, segurar, { passive: true })
+    );
+
+    let anterior = 0;
+    const passo = (agora) => {
+      const dt = anterior ? Math.min(agora - anterior, 50) : 0;
+      anterior = agora;
+      const meio = janela.scrollWidth / 2;
+      if (!devagar && Date.now() > pausa && meio > janela.clientWidth) {
+        janela.scrollLeft += (dt * 0.024);
+      }
+      if (meio > 0 && janela.scrollLeft >= meio) janela.scrollLeft -= meio;
+      requestAnimationFrame(passo);
+    };
+    requestAnimationFrame(passo);
+  }
+
   /* ---------- 4. Como eu te ajudo ---------- */
   $("#ajudaTitulo").textContent = DADOS.ajuda.titulo;
   $("#ajudaLista").innerHTML = DADOS.ajuda.itens.map((it) =>

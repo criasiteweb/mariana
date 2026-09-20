@@ -299,28 +299,26 @@ a{ color: inherit; }
 
 /* trilho que anda sozinho */
 .mural__janela{
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
   margin: 0 -20px;      /* anula o respiro da coluna: as fotos vão de borda a borda */
   padding: 4px 0 10px;
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 26px, #000 calc(100% - 26px), transparent 100%);
           mask-image: linear-gradient(90deg, transparent 0, #000 26px, #000 calc(100% - 26px), transparent 100%);
 }
 
+.mural__janela::-webkit-scrollbar{ display: none; }
+
+/* o trilho anda sozinho pelo JavaScript e aceita o dedo a qualquer momento:
+   no celular a animação de CSS era desligada pela economia de bateria */
 .trilho{
   display: flex;
   gap: 12px;
   width: max-content;
-  padding-left: 20px;
-  animation: correr 58s linear infinite;
-}
-.mural__janela:hover .trilho{ animation-play-state: paused; }
-
-@keyframes correr{
-  from{ transform: translateX(0); }
-  to  { transform: translateX(calc(-50% - 6px)); }  /* metade da lista + metade do vão */
-}
-@media (prefers-reduced-motion: reduce){
-  .trilho{ animation: none; }
+  padding: 0 20px;
 }
 
 /* altura fixa, largura pelo formato natural da foto: nada é espremido */
