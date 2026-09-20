@@ -51,38 +51,40 @@
   $("#muralLegenda").textContent = DADOS.mural.legenda;
 
   const trilho = $("#trilho");
-  // duas voltas da mesma lista: a animação volta ao início sem salto
-  const fotos = DADOS.mural.fotos.concat(DADOS.mural.fotos);
-  trilho.innerHTML = fotos.map((f, i) =>
+  trilho.innerHTML = DADOS.mural.fotos.map((f, i) =>
     '<figure class="cartao cartao--' + f.formato + '" role="listitem">' +
-      '<img src="assets/img/' + f.arquivo + '" alt="' + (i < DADOS.mural.fotos.length ? f.alt : "") + '"' +
-      (i < 3 ? '' : ' loading="lazy"') + '>' +
+      '<img src="assets/img/' + f.arquivo + '" alt="' + f.alt + '"' +
+      (i < 2 ? '' : ' loading="lazy"') + '>' +
     '</figure>'
   ).join("");
 
 
-  /* ---------- trilho: anda sozinho e aceita arrastar com o dedo ---------- */
+  /* ---------- trilho: setas para clicar, e arrastar com o dedo ---------- */
   const janela = $(".mural__janela");
-  if (janela) {
-    const devagar = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let pausa = 0;
-    const segurar = () => { pausa = Date.now() + 2500; };
-    ["pointerdown", "touchstart", "wheel", "mouseenter"].forEach((ev) =>
-      janela.addEventListener(ev, segurar, { passive: true })
-    );
+  const antes  = $("#muralAntes");
+  const depois = $("#muralDepois");
 
-    let anterior = 0;
-    const passo = (agora) => {
-      const dt = anterior ? Math.min(agora - anterior, 50) : 0;
-      anterior = agora;
-      const meio = janela.scrollWidth / 2;
-      if (!devagar && Date.now() > pausa && meio > janela.clientWidth) {
-        janela.scrollLeft += (dt * 0.024);
-      }
-      if (meio > 0 && janela.scrollLeft >= meio) janela.scrollLeft -= meio;
-      requestAnimationFrame(passo);
+  if (janela && antes && depois) {
+    const passo = () => {
+      const cartao = janela.querySelector(".cartao");
+      return cartao ? cartao.getBoundingClientRect().width + 12 : janela.clientWidth * 0.8;
     };
-    requestAnimationFrame(passo);
+    const andar = (lado) => {
+      janela.scrollBy({ left: lado * passo(), behavior: "smooth" });
+    };
+    antes.addEventListener("click", () => andar(-1));
+    depois.addEventListener("click", () => andar(1));
+
+    // apaga a seta quando nao ha mais foto para aquele lado
+    const conferir = () => {
+      const fim = janela.scrollWidth - janela.clientWidth - 2;
+      antes.classList.toggle("mural__seta--off", janela.scrollLeft <= 2);
+      depois.classList.toggle("mural__seta--off", janela.scrollLeft >= fim);
+    };
+    janela.addEventListener("scroll", conferir, { passive: true });
+    window.addEventListener("resize", conferir);
+    setTimeout(conferir, 300);
+    window.addEventListener("load", conferir);
   }
 
   /* ---------- 4. Como eu te ajudo ---------- */

@@ -298,11 +298,42 @@ a{ color: inherit; }
 }
 
 /* trilho que anda sozinho */
+/* palco: a janela das fotos com uma seta de cada lado */
+.mural__palco{
+  position: relative;
+}
+
+.mural__seta{
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(185,130,47,.4);
+  border-radius: 50%;
+  background: var(--creme);
+  color: var(--cafe);
+  box-shadow: 0 10px 22px -10px rgba(46,30,16,.55);
+  cursor: pointer;
+  transition: opacity .25s ease, transform .18s ease;
+}
+.mural__seta svg{ width: 21px; height: 21px; }
+.mural__seta:active{ transform: translateY(-50%) scale(.92); }
+.mural__seta--esq{ left: -4px; }
+.mural__seta--dir{ right: -4px; }
+.mural__seta--off{ opacity: .25; pointer-events: none; }
+
 .mural__janela{
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 20px;
   scrollbar-width: none;
   margin: 0 -20px;      /* anula o respiro da coluna: as fotos vão de borda a borda */
   padding: 4px 0 10px;
@@ -324,6 +355,7 @@ a{ color: inherit; }
 /* altura fixa, largura pelo formato natural da foto: nada é espremido */
 .cartao{
   flex: none;
+  scroll-snap-align: start;
   height: 204px;
   margin: 0;
   border-radius: 16px;
