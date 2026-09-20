@@ -19,8 +19,8 @@ const DADOS = {
   instagram: "marianamouracorretora",
   instagramUrl: "https://www.instagram.com/marianamouracorretora/",
 
-  // PENDÊNCIA: região exata de atuação (nos posts aparece Santo André / ABC)
-  regiao: "[CONFIRMAR REGIÃO]",
+  // Confirmado pelo Matheus: mesma região das outras duas corretoras.
+  regiao: "Região Metropolitana de São Paulo",
 
   // PENDÊNCIA: quantas famílias ela já atendeu
   familias: "[00]",
