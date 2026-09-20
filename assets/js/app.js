@@ -69,26 +69,18 @@
       const cartao = janela.querySelector(".cartao");
       return cartao ? cartao.getBoundingClientRect().width + 12 : janela.clientWidth * 0.8;
     };
-    /* posição definida direto, sem recurso de rolagem suave do navegador:
-       o "smooth" é cancelado pelo encaixe das fotos e a faixa não sai do lugar */
+    /* passa sem fim: na última foto a seta volta para a primeira,
+       e na primeira a seta da esquerda leva para a última */
     const andar = (lado) => {
       const limite = janela.scrollWidth - janela.clientWidth;
-      janela.scrollLeft = Math.max(0, Math.min(limite, janela.scrollLeft + lado * passo()));
+      const agora = janela.scrollLeft;
+      if (lado > 0 && agora >= limite - 4) { janela.scrollLeft = 0; return; }
+      if (lado < 0 && agora <= 4)          { janela.scrollLeft = limite; return; }
+      janela.scrollLeft = Math.max(0, Math.min(limite, agora + lado * passo()));
     };
 
     antes.addEventListener("click", () => andar(-1));
     depois.addEventListener("click", () => andar(1));
-
-    // apaga a seta quando nao ha mais foto para aquele lado
-    const conferir = () => {
-      const fim = janela.scrollWidth - janela.clientWidth - 2;
-      antes.classList.toggle("mural__seta--off", janela.scrollLeft <= 2);
-      depois.classList.toggle("mural__seta--off", janela.scrollLeft >= fim);
-    };
-    janela.addEventListener("scroll", conferir, { passive: true });
-    window.addEventListener("resize", conferir);
-    setTimeout(conferir, 300);
-    window.addEventListener("load", conferir);
   }
 
   /* ---------- 4. Como eu te ajudo ---------- */

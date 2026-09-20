@@ -321,7 +321,6 @@ a{ color: inherit; }
 }
 .mural__seta svg{ width: 16px; height: 16px; }
 .mural__seta:active{ transform: scale(.9); }
-.mural__seta--off{ opacity: .3; pointer-events: none; }
 
 .mural__janela{
   overflow-x: auto;
