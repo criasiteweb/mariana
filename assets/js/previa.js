@@ -38,8 +38,17 @@ var PREVIA = {
     gravar: function (c, v) { try { localStorage.setItem(c, v); } catch (e) {} }
   };
 
+  var chave = location.hash.replace("#", "");
+
+  /* ---- #criasiteweb-sair: devolve este aparelho a visao da cliente,
+         com o prazo de 24h zerado. Serve para o Matheus testar. ---- */
+  if (chave === PREVIA.CHAVE_DONO + "-sair") {
+    try { localStorage.removeItem("previa-dono"); localStorage.removeItem("previa-inicio"); } catch (e) {}
+    history.replaceState(null, "", location.pathname + location.search);
+  }
+
   /* ---- acesso do dono: #criasiteweb libera para sempre neste aparelho ---- */
-  if (location.hash.replace("#", "") === PREVIA.CHAVE_DONO) {
+  if (chave === PREVIA.CHAVE_DONO) {
     guarda.gravar("previa-dono", "1");
     history.replaceState(null, "", location.pathname + location.search);
   }
