@@ -20,7 +20,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="assets/css/estilo.css?v=19">
+<script>
+/* carimbo que muda a cada 2 minutos: o aparelho nunca fica preso
+   numa aparência antiga, e ainda assim reaproveita o arquivo entre telas */
+document.write('<link rel="stylesheet" href="assets/css/estilo.css?t='
+  + Math.floor(Date.now() / 120000) + '">');
+</script>
+<noscript><link rel="stylesheet" href="assets/css/estilo.css"></noscript>
 </head>
 <body>
 
@@ -186,7 +192,12 @@
   <span>WhatsApp</span>
 </a>
 
-<script src="assets/js/dados.js?v=19"></script>
-<script src="assets/js/app.js?v=19"></script>
+<script>
+(function(){
+  var t = Math.floor(Date.now() / 120000);
+  document.write('<script src="assets/js/dados.js?t=' + t + '"><\/script>');
+  document.write('<script src="assets/js/app.js?t='   + t + '"><\/script>');
+})();
+</script>
 </body>
 </html>
