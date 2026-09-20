@@ -89,32 +89,18 @@ document.write('<link rel="stylesheet" href="assets/css/estilo.css?t='
     <h2 class="mural__titulo" id="muralTitulo">Mais um sonho realizado <i aria-hidden="true">✦</i></h2>
     <p class="mural__legenda" id="muralLegenda">Cada foto dessas é uma chave que saiu da minha mão para a mão de alguém.</p>
 
-    <div class="mural__palco">
-      <button class="mural__seta mural__seta--esq" id="muralAntes" type="button" aria-label="Ver a foto anterior">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
-      </button>
-
-      <div class="mural__janela">
+    <div class="mural__janela">
         <div class="trilho" id="trilho" role="list" aria-label="Fotos de entregas de chave"></div>
       </div>
 
-      <button class="mural__seta mural__seta--dir" id="muralDepois" type="button" aria-label="Ver a próxima foto">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-      </button>
-    </div>
-  </section>
-
-  <!-- ============ 3b. VÍDEO DO DECORADO ============ -->
-  <section class="video bloco" data-revela aria-labelledby="videoTitulo">
-    <h2 class="secao__titulo" id="videoTitulo">Dá uma olhada no decorado</h2>
-    <p class="video__legenda" id="videoLegenda">É assim que pode ser o seu. Aperte o play e veja por dentro.</p>
-    <div class="video__moldura">
-      <video id="videoDecorado" controls playsinline preload="none"
-             poster="assets/img/decorado-capa.jpg" aria-label="Vídeo do apartamento decorado">
-        <source src="assets/video/decorado.mp4" type="video/mp4" />
-        Seu navegador não consegue mostrar o vídeo.
-      </video>
-    </div>
+      <div class="mural__setas">
+        <button class="mural__seta" id="muralAntes" type="button" aria-label="Ver a foto anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="mural__seta" id="muralDepois" type="button" aria-label="Ver a próxima foto">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
   </section>
 
   <!-- ============ 4. COMO EU TE AJUDO ============ -->

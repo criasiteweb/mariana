@@ -298,34 +298,30 @@ a{ color: inherit; }
 }
 
 /* trilho que anda sozinho */
-/* palco: a janela das fotos com uma seta de cada lado */
-.mural__palco{
-  position: relative;
+/* setas embaixo do mural: nao ficam por cima das fotos */
+.mural__setas{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
 }
-
 .mural__seta{
-  position: absolute;
-  top: 50%;
-  z-index: 4;
-  transform: translateY(-50%);
-  width: 26px;
-  height: 26px;
+  width: 32px;
+  height: 32px;
   display: grid;
   place-items: center;
   padding: 0;
-  border: 1px solid var(--creme);
+  border: 1px solid rgba(185,130,47,.45);
   border-radius: 50%;
-  background: var(--cafe);
-  color: var(--creme);
-  box-shadow: 0 8px 20px -6px rgba(46,30,16,.75);
+  background: var(--creme);
+  color: var(--marrom);
+  box-shadow: var(--sombra);
   cursor: pointer;
   transition: opacity .25s ease, transform .18s ease;
 }
-.mural__seta svg{ width: 13px; height: 13px; }
-.mural__seta:active{ transform: translateY(-50%) scale(.9); }
-.mural__seta--esq{ left: 10px; }
-.mural__seta--dir{ right: 10px; }
-.mural__seta--off{ opacity: .35; pointer-events: none; }
+.mural__seta svg{ width: 16px; height: 16px; }
+.mural__seta:active{ transform: scale(.9); }
+.mural__seta--off{ opacity: .3; pointer-events: none; }
 
 .mural__janela{
   overflow-x: auto;
