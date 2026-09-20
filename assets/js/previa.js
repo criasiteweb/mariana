@@ -22,7 +22,7 @@ var PREVIA = {
   ATIVO: true,
 
   HORAS: 24,                       // quanto tempo dura o acesso dela
-  LIMITE: "2026-09-27T23:59:00",   // depois desta data acaba para todo mundo
+  LIMITE: "2026-09-21T15:10:00",   // hora exata em que o acesso dela acaba, aconteca o que acontecer
   CHAVE_DONO: "criasiteweb",       // #criasiteweb no fim do link = acesso total
   ZAP_CRIASITEWEB: "5511988097416",// WhatsApp do Matheus no aviso de prazo vencido
 
