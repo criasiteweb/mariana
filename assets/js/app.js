@@ -40,6 +40,7 @@
   $("#instaLink span").textContent = "@" + DADOS.instagram;
   $("#instaLink").href             = DADOS.instagramUrl;
   $("#atalhoInsta").href           = DADOS.instagramUrl;
+  $("#atalhoTiktok").href          = DADOS.tiktokUrl;
 
   $("#zapTopo").href      = linkZap(MSG.topo);
   $("#zapFim").href       = linkZap(MSG.fim);

@@ -19,6 +19,9 @@ const DADOS = {
   instagram: "marianamouracorretora",
   instagramUrl: "https://www.instagram.com/marianamouracorretora/",
 
+  tiktok: "marianamoura1165",
+  tiktokUrl: "https://www.tiktok.com/@marianamoura1165",
+
   // Confirmado pelo Matheus: mesma região das outras duas corretoras.
   regiao: "Região Metropolitana de São Paulo",
 
