@@ -32,7 +32,6 @@
   $("#creci").textContent          = DADOS.creci;
   $("#especialidade").textContent  = DADOS.especialidade;
   $("#chamada").textContent        = DADOS.chamada;
-  $(".carimbo span").textContent   = DADOS.carimbo;
 
   $("#zapNumero").textContent      = DADOS.whatsappVisivel;
   $("#instaLink span").textContent = "@" + DADOS.instagram;
@@ -44,7 +43,6 @@
   $("#zapFlutuante").href = linkZap(MSG.topo);
 
   /* ---------- 3. Mural ---------- */
-  $("#contadorNumero").innerHTML = marcar(DADOS.familias);
   $("#muralTitulo").innerHTML    = DADOS.mural.titulo.replace(/ ([^ ]+)$/, '\u00a0$1') + '\u00a0<i aria-hidden="true">✦</i>';
   $("#muralLegenda").textContent = DADOS.mural.legenda;
 

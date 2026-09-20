@@ -16,7 +16,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/css/estilo.css">
 </head>
@@ -24,47 +24,51 @@
 
 <main class="bio">
 
-  <!-- ============ 1. ROSTO ============ -->
+  <!-- ============ 1. ROSTO + ACAO (cabecalho unico) ============ -->
   <header class="topo bloco" data-revela>
+
+    <p class="topo__rotulo">
+      <span id="cargo">Corretora de imóveis</span>
+      <i aria-hidden="true">&#8226;</i>
+      <span id="creci">CRECI 318621</span>
+    </p>
+
     <div class="topo__moldura">
-      <img class="topo__foto" src="assets/img/mariana-retrato.jpg" alt="Mariana Moura, corretora de imóveis" width="760" height="760">
+      <img class="topo__foto" src="assets/img/mariana-retrato.jpg"
+           alt="Mariana Moura, corretora de imóveis"
+           width="565" height="568" fetchpriority="high" decoding="async">
       <span class="topo__selo" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
           <path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V21h13V9.5"/><path d="M10 21v-6h4v6"/>
         </svg>
       </span>
     </div>
 
     <h1 class="topo__nome">Mariana Moura</h1>
-    <p class="topo__linha"><span id="cargo">Corretora de imóveis</span> <b>·</b> <span id="creci">CRECI 318621</span></p>
+
     <p class="topo__especialidade" id="especialidade">Especialista no Programa Minha Casa Minha Vida</p>
+
     <p class="topo__chamada" id="chamada">Encontre aqui o lugar perfeito para você e sua família.</p>
 
-    <p class="carimbo" aria-hidden="true"><span>Saia do aluguel</span></p>
+    <div class="topo__acao">
+      <a class="botao botao--zap" id="zapTopo" href="#" target="_blank" rel="noopener">
+        <svg class="botao__icone" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.96L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 1 1-4.1 15.08l-.3-.17-3.08.89.9-3-.2-.31A8.1 8.1 0 0 1 12.05 3.8Zm4.65 10.3c-.25-.13-1.48-.73-1.7-.81-.23-.09-.4-.13-.56.12s-.64.8-.79.97c-.14.17-.29.19-.54.06a6.6 6.6 0 0 1-1.95-1.2 7.3 7.3 0 0 1-1.35-1.68c-.14-.25-.01-.38.11-.5.11-.12.25-.29.37-.44.12-.15.16-.25.24-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.55-.43h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.55c.13.16 1.73 2.64 4.2 3.7.58.26 1.04.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.48-.6 1.69-1.19.2-.58.2-1.08.14-1.19-.06-.1-.23-.16-.48-.29Z"/></svg>
+        <span class="botao__texto">
+          <b>Falar com a Mariana</b>
+          <small id="zapNumero">(11) 91943-1680</small>
+        </span>
+      </a>
+
+      <a class="linha-insta" id="instaLink" href="https://www.instagram.com/marianamouracorretora/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none"/></svg>
+        <span>@marianamouracorretora</span>
+      </a>
+    </div>
+
   </header>
-
-  <!-- ============ 2. AÇÃO PRINCIPAL ============ -->
-  <section class="acao bloco" data-revela>
-    <a class="botao botao--zap" id="zapTopo" href="#" target="_blank" rel="noopener">
-      <svg class="botao__icone" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.96L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 1 1-4.1 15.08l-.3-.17-3.08.89.9-3-.2-.31A8.1 8.1 0 0 1 12.05 3.8Zm4.65 10.3c-.25-.13-1.48-.73-1.7-.81-.23-.09-.4-.13-.56.12s-.64.8-.79.97c-.14.17-.29.19-.54.06a6.6 6.6 0 0 1-1.95-1.2 7.3 7.3 0 0 1-1.35-1.68c-.14-.25-.01-.38.11-.5.11-.12.25-.29.37-.44.12-.15.16-.25.24-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.55-.43h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.55c.13.16 1.73 2.64 4.2 3.7.58.26 1.04.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.48-.6 1.69-1.19.2-.58.2-1.08.14-1.19-.06-.1-.23-.16-.48-.29Z"/></svg>
-      <span class="botao__texto">
-        <b>Falar com a Mariana</b>
-        <small id="zapNumero">(11) 91943-1680</small>
-      </span>
-    </a>
-
-    <a class="linha-insta" id="instaLink" href="https://www.instagram.com/marianamouracorretora/" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none"/></svg>
-      <span>@marianamouracorretora</span>
-    </a>
-  </section>
 
   <!-- ============ 3. MURAL DE ENTREGAS ============ -->
   <section class="mural bloco" data-revela aria-labelledby="muralTitulo">
-    <p class="contador">
-      <b id="contadorNumero">[00]</b>
-      <span>famílias com a chave na mão</span>
-    </p>
     <h2 class="mural__titulo" id="muralTitulo">Mais um sonho realizado <i aria-hidden="true">✦</i></h2>
     <p class="mural__legenda" id="muralLegenda">Cada foto dessas é uma chave que saiu da minha mão para a mão de alguém.</p>
 
