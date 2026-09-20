@@ -33,6 +33,9 @@
   $("#especialidade").textContent  = DADOS.especialidade;
   $("#chamada").textContent        = DADOS.chamada;
 
+  $("#sobreTexto").innerHTML =
+    DADOS.sobre.map((t) => '<p class="sobre__texto">' + t + "</p>").join("");
+
   $("#zapNumero").textContent      = DADOS.whatsappVisivel;
   $("#instaLink span").textContent = "@" + DADOS.instagram;
   $("#instaLink").href             = DADOS.instagramUrl;

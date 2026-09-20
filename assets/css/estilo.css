@@ -100,7 +100,7 @@ a{ color: inherit; }
   top: -26px;
   left: -20px;
   right: -20px;
-  height: 360px;
+  height: 330px;
   z-index: 0;
   overflow: hidden;
   border-radius: 0 0 38px 38px;
@@ -139,26 +139,27 @@ a{ color: inherit; }
 }
 .topo__rotulo i{ color: var(--dourado); font-style: normal; margin: 0 3px; }
 
-/* moldura do rosto: arco com anel duplo dourado, tamanho contido */
+/* moldura do rosto: bolinha de perfil, com anel duplo dourado */
 .topo__moldura{
   position: relative;
-  width: min(186px, 47vw);
-  margin: 0 auto 22px;
+  width: min(168px, 43vw);
+  aspect-ratio: 1;
+  margin: 0 auto 20px;
 }
 .topo__moldura::before{
   content: "";
   position: absolute;
   inset: -9px;
-  border: 1px solid rgba(185,130,47,.5);
-  border-radius: var(--arco);
+  border: 1.5px solid rgba(185,130,47,.55);
+  border-radius: 50%;
   z-index: 0;
 }
 .topo__moldura::after{
   content: "";
   position: absolute;
   inset: -18px;
-  border: 1px solid rgba(185,130,47,.18);
-  border-radius: var(--arco);
+  border: 1px solid rgba(185,130,47,.2);
+  border-radius: 50%;
   z-index: 0;
 }
 
@@ -167,21 +168,21 @@ a{ color: inherit; }
   z-index: 1;
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1.14;
+  height: 100%;
   object-fit: cover;
-  object-position: center 20%;
-  border-radius: var(--arco);
+  object-position: center 18%;
+  border-radius: 50%;
+  border: 3px solid var(--creme);
   box-shadow: var(--sombra-g);
 }
 
 .topo__selo{
   position: absolute;
   z-index: 2;
-  right: -12px;
-  bottom: 12px;
-  width: 44px;
-  height: 44px;
+  right: 1px;
+  bottom: 5px;
+  width: 42px;
+  height: 42px;
   display: grid;
   place-items: center;
   background: var(--creme);
@@ -190,7 +191,7 @@ a{ color: inherit; }
   border-radius: 50%;
   box-shadow: var(--sombra);
 }
-.topo__selo svg{ width: 21px; height: 21px; }
+.topo__selo svg{ width: 20px; height: 20px; }
 
 .topo__nome{
   font-family: var(--display);
@@ -343,6 +344,40 @@ a{ color: inherit; }
 .cartao{ height: 232px; }
 
 /* ================= 4. COMO EU TE AJUDO ================= */
+.sobre{
+  margin-top: 44px;
+  padding: 26px 22px;
+  background: rgba(253,247,238,.82);
+  border: 1px solid rgba(185,130,47,.22);
+  border-radius: var(--raio-g);
+  box-shadow: var(--sombra);
+}
+.sobre__rotulo{
+  margin: 0 0 8px;
+  font-size: .66rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--dourado);
+}
+.sobre__titulo{
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.55rem;
+  line-height: 1.15;
+  letter-spacing: -.015em;
+  color: var(--cafe);
+  margin: 0 0 14px;
+}
+.sobre__texto{
+  margin: 0 0 13px;
+  font-size: .98rem;
+  line-height: 1.62;
+  color: var(--tinta-suave);
+}
+.sobre__texto:last-child{ margin-bottom: 0; }
+.sobre__texto b{ color: var(--cafe); font-weight: 700; }
+
 .ajuda{ margin-top: 48px; }
 
 .secao__titulo{
