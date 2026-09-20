@@ -89,7 +89,44 @@ a{ color: inherit; }
 }
 
 /* ================= 1. ROSTO ================= */
-.topo{ text-align: center; padding-top: 4px; }
+.topo{ position: relative; text-align: center; padding-top: 4px; }
+
+/* tudo do cabeçalho fica por cima do fundo */
+.topo > *:not(.topo__fundo){ position: relative; z-index: 1; }
+
+/* foto dela no decorado, sangrando como ambientação atrás do cabeçalho */
+.topo__fundo{
+  position: absolute;
+  top: -26px;
+  left: -20px;
+  right: -20px;
+  height: 360px;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 0 0 38px 38px;
+}
+.topo__fundo::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../img/mariana-sofa.jpg") 62% 16% / cover no-repeat;
+  filter: saturate(.92);
+}
+.topo__fundo::after{
+  /* véu na cor da areia: a foto vira ambiente, o texto continua legível */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(246,233,215,.58) 0%,
+    rgba(246,233,215,.76) 42%,
+    rgba(246,233,215,.95) 78%,
+    var(--areia) 100%);
+}
+
+@media (min-width: 900px){
+  .topo__fundo{ border-radius: 40px 40px 38px 38px; }
+}
 
 /* etiqueta fina em caixa alta, acima do rosto */
 .topo__rotulo{
