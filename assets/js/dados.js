@@ -29,9 +29,8 @@ const DADOS = {
      Instagram (especialidade, campanhas e a forma como ela descreve o
      trabalho). Nada de tempo de mercado ou número inventado. */
   sobre: [
-    "Sou corretora de imóveis e <b>especialista no Programa Minha Casa Minha Vida</b>. Ajudo famílias a darem o passo mais importante: sair do aluguel e conquistar o primeiro imóvel.",
-    "Acompanho cada etapa de perto — a simulação, a escolha do apartamento, a documentação e a entrega da chave. Você não passa por nenhuma parte do processo sozinho.",
-    "Se você ainda não sabe se é o seu momento, vamos conversar. <b>Muitas das famílias que hoje moram no próprio apartamento começaram com essa mesma dúvida.</b>"
+    "Sou corretora de imóveis e <b>especialista no Programa Minha Casa Minha Vida</b>. Ajudo famílias a saírem do aluguel e conquistarem o primeiro imóvel.",
+    "Acompanho cada etapa de perto: a simulação, a escolha do apartamento, a documentação e a entrega da chave. <b>Você não passa por nada disso sozinho.</b>"
   ],
 
   mural: {
@@ -86,7 +85,7 @@ const DADOS = {
 
   conta: {
     titulo: "Quanto você já pagou de aluguel?",
-    texto: "Arrasta e vê o tamanho do buraco. Esse dinheiro já foi embora — e não volta.",
+    texto: "Arrasta e vê o tamanho do buraco. Esse dinheiro já foi embora e não volta.",
     remate: "Isso daria a entrada do seu apartamento.",
     botao: "Quero parar de pagar aluguel"
   },
