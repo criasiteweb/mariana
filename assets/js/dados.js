@@ -25,6 +25,15 @@ const DADOS = {
   // PENDÊNCIA: quantas famílias ela já atendeu
   familias: "[00]",
 
+  /* Texto de apresentação. Escrito a partir do que ela mesma publica no
+     Instagram (especialidade, campanhas e a forma como ela descreve o
+     trabalho). Nada de tempo de mercado ou número inventado. */
+  sobre: [
+    "Sou corretora de imóveis e <b>especialista no Programa Minha Casa Minha Vida</b>. O meu trabalho é tirar família do aluguel — e eu levo isso a sério.",
+    "Eu acompanho tudo do começo ao fim: a primeira simulação, a escolha do apartamento, a papelada chata e o dia da chave na mão. Você não fica perdido em nenhuma parte do caminho.",
+    "Se você já achou que não dava, vem conversar comigo. <b>Muita gente que hoje tem a chave do próprio apartamento começou achando exatamente a mesma coisa.</b>"
+  ],
+
   mural: {
     titulo: "Mais um sonho realizado",
     legenda: "Cada foto dessas é uma chave que saiu da minha mão para a mão de alguém.",
