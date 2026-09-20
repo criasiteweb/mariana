@@ -323,9 +323,10 @@ a{ color: inherit; }
   height: 100%;
   width: auto;
   display: block;
+  /* nada de corte: a arte entra inteira, com a proporção que ela publicou */
+  object-fit: contain;
 }
-.cartao--larga img{ width: 272px; object-fit: cover; }
-.cartao--quadrada img{ width: 199px; object-fit: cover; }
+.cartao{ height: 232px; }
 
 /* ================= 4. COMO EU TE AJUDO ================= */
 .ajuda{ margin-top: 48px; }
@@ -628,4 +629,30 @@ a{ color: inherit; }
   border-bottom: 2px dotted var(--dourado);
   padding: 0 3px;
   border-radius: 3px;
+}
+
+/* ================= 3b. VÍDEO DO DECORADO ================= */
+.video{ margin-top: 44px; }
+.video__legenda{
+  margin: -6px 0 18px;
+  text-align: center;
+  font-size: .95rem;
+  line-height: 1.55;
+  color: var(--cafe-claro);
+}
+.video__moldura{
+  position: relative;
+  max-width: 320px;
+  margin: 0 auto;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 3px solid var(--creme);
+  background: var(--areia-escura);
+  box-shadow: 0 22px 40px -20px rgba(46,30,16,.55);
+}
+.video__moldura video{
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
 }
