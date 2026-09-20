@@ -29,8 +29,8 @@ const DADOS = {
      Instagram (especialidade, campanhas e a forma como ela descreve o
      trabalho). Nada de tempo de mercado ou número inventado. */
   sobre: [
-    "Sou corretora de imóveis e <b>especialista no Programa Minha Casa Minha Vida</b>. Ajudo famílias a saírem do aluguel e conquistarem o primeiro imóvel.",
-    "Acompanho cada etapa de perto: a simulação, a escolha do apartamento, a documentação e a entrega da chave. <b>Você não passa por nada disso sozinho.</b>"
+    "Sou corretora de imóveis e <b>especialista no Programa Minha Casa Minha Vida</b>.",
+    "Ajudo famílias a saírem do aluguel e acompanho você da simulação até a entrega da chave."
   ],
 
   mural: {
