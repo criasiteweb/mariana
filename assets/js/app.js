@@ -69,14 +69,31 @@
       const cartao = janela.querySelector(".cartao");
       return cartao ? cartao.getBoundingClientRect().width + 12 : janela.clientWidth * 0.8;
     };
+    /* desliza até o destino em vez de pular de uma vez; se o aparelho não
+       conseguir animar, o destino é aplicado mesmo assim no fim */
+    let animando = 0;
+    const deslizar = (destino) => {
+      cancelAnimationFrame(animando);
+      const inicio = janela.scrollLeft;
+      const t0 = (window.performance || Date).now();
+      let pronto = false;
+      const quadro = (t) => {
+        const p = Math.min(((t || 0) - t0) / 320, 1);
+        janela.scrollLeft = inicio + (destino - inicio) * (1 - Math.pow(1 - p, 3));
+        if (p < 1) animando = requestAnimationFrame(quadro); else pronto = true;
+      };
+      animando = requestAnimationFrame(quadro);
+      setTimeout(() => { if (!pronto) { cancelAnimationFrame(animando); janela.scrollLeft = destino; } }, 440);
+    };
+
     /* passa sem fim: na última foto a seta volta para a primeira,
        e na primeira a seta da esquerda leva para a última */
     const andar = (lado) => {
       const limite = janela.scrollWidth - janela.clientWidth;
       const agora = janela.scrollLeft;
-      if (lado > 0 && agora >= limite - 4) { janela.scrollLeft = 0; return; }
-      if (lado < 0 && agora <= 4)          { janela.scrollLeft = limite; return; }
-      janela.scrollLeft = Math.max(0, Math.min(limite, agora + lado * passo()));
+      if (lado > 0 && agora >= limite - 4) return deslizar(0);
+      if (lado < 0 && agora <= 4)          return deslizar(limite);
+      deslizar(Math.max(0, Math.min(limite, agora + lado * passo())));
     };
 
     antes.addEventListener("click", () => andar(-1));

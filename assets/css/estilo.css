@@ -327,8 +327,6 @@ a{ color: inherit; }
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
-  scroll-snap-type: x proximity;
-  scroll-padding-left: 20px;
   scrollbar-width: none;
   margin: 0 -20px;      /* anula o respiro da coluna: as fotos vão de borda a borda */
   padding: 4px 0 10px;
@@ -350,7 +348,6 @@ a{ color: inherit; }
 /* altura fixa, largura pelo formato natural da foto: nada é espremido */
 .cartao{
   flex: none;
-  scroll-snap-align: start;
   height: 204px;
   margin: 0;
   border-radius: 16px;
