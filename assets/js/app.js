@@ -69,9 +69,13 @@
       const cartao = janela.querySelector(".cartao");
       return cartao ? cartao.getBoundingClientRect().width + 12 : janela.clientWidth * 0.8;
     };
+    /* posição definida direto, sem recurso de rolagem suave do navegador:
+       o "smooth" é cancelado pelo encaixe das fotos e a faixa não sai do lugar */
     const andar = (lado) => {
-      janela.scrollBy({ left: lado * passo(), behavior: "smooth" });
+      const limite = janela.scrollWidth - janela.clientWidth;
+      janela.scrollLeft = Math.max(0, Math.min(limite, janela.scrollLeft + lado * passo()));
     };
+
     antes.addEventListener("click", () => andar(-1));
     depois.addEventListener("click", () => andar(1));
 

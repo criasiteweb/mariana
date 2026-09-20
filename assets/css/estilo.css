@@ -332,7 +332,7 @@ a{ color: inherit; }
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
   scroll-padding-left: 20px;
   scrollbar-width: none;
   margin: 0 -20px;      /* anula o respiro da coluna: as fotos vão de borda a borda */
