@@ -28,21 +28,25 @@ const DADOS = {
   mural: {
     titulo: "Mais um sonho realizado",
     legenda: "Cada foto dessas é uma chave que saiu da minha mão para a mão de alguém.",
+    /* As artes entram inteiras, do jeito que ela publica no Instagram.
+       Nada é cortado — por isso todas aparecem no formato quadrado original. */
     fotos: [
-      { arquivo: "entrega-01.jpg", formato: "larga",    alt: "Cliente da Mariana com a placa Conquistei o sonho da minha casa própria" },
-      { arquivo: "entrega-07.jpg", formato: "quadrada", alt: "Arte de entrega de chave da Mariana Moura" },
-      { arquivo: "entrega-03.jpg", formato: "larga",    alt: "Casal recebendo a chave do apartamento com a Mariana" },
-      { arquivo: "entrega-12.jpg", formato: "quadrada", alt: "Mariana com clientes no apartamento decorado" },
-      { arquivo: "entrega-05.jpg", formato: "larga",    alt: "Família com a chave da SBT Imóveis no decorado" },
-      { arquivo: "entrega-08.jpg", formato: "quadrada", alt: "Arte de entrega de chave da Mariana Moura" },
-      { arquivo: "entrega-02.jpg", formato: "larga",    alt: "Mariana com clientes na assinatura do contrato" },
-      { arquivo: "entrega-13.jpg", formato: "quadrada", alt: "Mariana com clientes na visita ao decorado" },
-      { arquivo: "entrega-06.jpg", formato: "larga",    alt: "Trio de clientes comemorando a compra do apartamento" },
-      { arquivo: "entrega-09.jpg", formato: "quadrada", alt: "Arte de entrega de chave da Mariana Moura" },
-      { arquivo: "entrega-04.jpg", formato: "larga",    alt: "Cliente segurando a chave da SBT Imóveis" },
-      { arquivo: "entrega-10.jpg", formato: "quadrada", alt: "Arte de entrega de chave da Mariana Moura" },
-      { arquivo: "entrega-11.jpg", formato: "quadrada", alt: "Arte de entrega de chave da Mariana Moura" }
+      { arquivo: "cliente-01.jpg", formato: "quadrada", alt: "Cliente da Mariana com a placa Conquistei o sonho da minha casa própria" },
+      { arquivo: "cliente-02.jpg", formato: "quadrada", alt: "Entrega de chave acompanhada pela Mariana Moura" },
+      { arquivo: "cliente-03.jpg", formato: "quadrada", alt: "Cliente comemorando a conquista do apartamento" },
+      { arquivo: "cliente-04.jpg", formato: "quadrada", alt: "Família recebendo a chave do primeiro imóvel" },
+      { arquivo: "cliente-05.jpg", formato: "quadrada", alt: "Mariana Moura com clientes no dia da entrega" },
+      { arquivo: "cliente-06.jpg", formato: "quadrada", alt: "Mais um sonho realizado com a Mariana Moura" },
+      { arquivo: "cliente-07.jpg", formato: "quadrada", alt: "Cliente saindo do aluguel com a Mariana Moura" }
     ]
+  },
+
+  /* Vídeo real do decorado, gravado por ela. */
+  video: {
+    titulo: "Dá uma olhada no decorado",
+    legenda: "É assim que pode ser o seu. Aperte o play e veja por dentro.",
+    arquivo: "assets/video/decorado.mp4",
+    capa: "assets/img/decorado-capa.jpg"
   },
 
   ajuda: {
