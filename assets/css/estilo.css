@@ -308,12 +308,12 @@ a{ color: inherit; }
   top: 50%;
   z-index: 4;
   transform: translateY(-50%);
-  width: 34px;
-  height: 34px;
+  width: 26px;
+  height: 26px;
   display: grid;
   place-items: center;
   padding: 0;
-  border: 1.5px solid var(--creme);
+  border: 1px solid var(--creme);
   border-radius: 50%;
   background: var(--cafe);
   color: var(--creme);
@@ -321,7 +321,7 @@ a{ color: inherit; }
   cursor: pointer;
   transition: opacity .25s ease, transform .18s ease;
 }
-.mural__seta svg{ width: 17px; height: 17px; }
+.mural__seta svg{ width: 13px; height: 13px; }
 .mural__seta:active{ transform: translateY(-50%) scale(.9); }
 .mural__seta--esq{ left: 10px; }
 .mural__seta--dir{ right: 10px; }
