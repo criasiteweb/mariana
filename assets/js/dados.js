@@ -29,9 +29,9 @@ const DADOS = {
      Instagram (especialidade, campanhas e a forma como ela descreve o
      trabalho). Nada de tempo de mercado ou número inventado. */
   sobre: [
-    "Sou corretora de imóveis e <b>especialista no Programa Minha Casa Minha Vida</b>. O meu trabalho é tirar família do aluguel — e eu levo isso a sério.",
-    "Eu acompanho tudo do começo ao fim: a primeira simulação, a escolha do apartamento, a papelada chata e o dia da chave na mão. Você não fica perdido em nenhuma parte do caminho.",
-    "Se você já achou que não dava, vem conversar comigo. <b>Muita gente que hoje tem a chave do próprio apartamento começou achando exatamente a mesma coisa.</b>"
+    "Sou corretora de imóveis e <b>especialista no Programa Minha Casa Minha Vida</b>. Ajudo famílias a darem o passo mais importante: sair do aluguel e conquistar o primeiro imóvel.",
+    "Acompanho cada etapa de perto — a simulação, a escolha do apartamento, a documentação e a entrega da chave. Você não passa por nenhuma parte do processo sozinho.",
+    "Se você ainda não sabe se é o seu momento, vamos conversar. <b>Muitas das famílias que hoje moram no próprio apartamento começaram com essa mesma dúvida.</b>"
   ],
 
   mural: {
