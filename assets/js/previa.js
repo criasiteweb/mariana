@@ -19,7 +19,7 @@
    ========================================================= */
 
 var PREVIA = {
-  ATIVO: true,
+  ATIVO: false,
 
   HORAS: 24,                       // quanto tempo dura o acesso dela
   LIMITE: "2026-09-21T15:10:00",   // hora exata em que o acesso dela acaba, aconteca o que acontecer
